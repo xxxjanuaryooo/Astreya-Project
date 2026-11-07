@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  RootView.swift
 //  Astreya
 //
 //  Created by Рамиль Аминаев on 07.11.2026.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct RootView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -20,5 +20,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    RootView()
 }
