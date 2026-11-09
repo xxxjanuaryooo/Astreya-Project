@@ -9,10 +9,9 @@ import SwiftUI
 
 struct RootView: View {
     var body: some View {
-        Image(systemName: "globe")
-            .font(.system(size: 25))
-            .foregroundStyle(.blue)
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            HomeScreenView()
+        }
     }
 }
 

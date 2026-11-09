@@ -20,13 +20,14 @@ struct AstreyaApp: App {
     
     var body: some Scene {
         WindowGroup {
-            if appViewModel.isLogin {
-                RootView()
-            } else {
-                ScrollView {
-                    AuthorizationView()
-                }
-            }
+//            if appViewModel.isLogin {
+//                RootView()
+//            } else {
+//                ScrollView {
+//                    AuthorizationView()
+//                }
+//            }
+            RootView()
         }
     }
 }
