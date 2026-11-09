@@ -9,9 +9,24 @@ import SwiftUI
 
 @main
 struct AstreyaApp: App {
+    
+    @ObservedObject var appViewModel = AppViewModel()
+    
+    init() {
+        if UserDefaults.standard.bool(forKey: "isLogin") {
+            appViewModel.isLogin = true
+        }
+    }
+    
     var body: some Scene {
         WindowGroup {
-            RootView()
+            if appViewModel.isLogin {
+                RootView()
+            } else {
+                ScrollView {
+                    AuthorizationView()
+                }
+            }
         }
     }
 }
