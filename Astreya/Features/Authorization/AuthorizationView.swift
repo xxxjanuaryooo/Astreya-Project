@@ -10,6 +10,8 @@ import SwiftUI
 struct AuthorizationView: View {
     var body: some View {
         VStack (alignment: .leading, spacing: 25) {
+            
+            //MARK: Логотип с названием
             HStack (spacing: 15) {
                 Image("Logo")
                     .resizable()
@@ -20,6 +22,7 @@ struct AuthorizationView: View {
                     .foregroundStyle(.accent)
             }
             
+            //MARK: Надпись про вход
             VStack (alignment: .leading, spacing: 7) {
                 Text("Вход в Astreya")
                     .font(.system(size: 42, weight: .heavy))
@@ -28,6 +31,7 @@ struct AuthorizationView: View {
                     .foregroundStyle(.gray)
             }
             
+            //MARK: Формы для заполнений
             VStack (alignment: .leading, spacing: 15) {
                 FormFieldView(
                     nameOfField: "Телефон",
@@ -40,6 +44,7 @@ struct AuthorizationView: View {
                 )
             }
             
+            //MARK: Кнопка "Забыли пароль?"
             HStack {
                 Spacer()
                 
@@ -52,6 +57,7 @@ struct AuthorizationView: View {
                 
             }
             
+            //MARK: Кнопка отправки формы
             Button {
                 //
             } label: {
@@ -64,6 +70,7 @@ struct AuthorizationView: View {
                     }
             }
             
+            //MARK: Кнопка перехода к регистрации
             HStack {
                 Spacer()
                 Text("Нет аккаунта?")
@@ -80,6 +87,7 @@ struct AuthorizationView: View {
             
             Spacer()
             
+            //MARK: Кнопка продолжения без регистрации
             VStack (alignment: .leading, spacing: 7) {
                 Button {
                     //
@@ -98,7 +106,6 @@ struct AuthorizationView: View {
                 
             }
 
-            
         }
         .padding(25)
     }
